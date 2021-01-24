@@ -12,6 +12,8 @@
     --font-primary: "Baloo Da 2", serif;
     --font-secondary: "Josefin Slab", serif;
     --font-action: "Mulish", serif;
+    --cor-fundo: rgb(248, 242, 242);
+    --cor-elem-pad: rgb(100, 224, 51);
 }
 
 /* menu hamburguer - inicio */
@@ -51,14 +53,14 @@
     align-items: center;
     color: #ffff;
     font-family: var(--font-action);
-    background-color: rgb(100, 224, 51);
+    background-color: var(--cor-elem-pad);
     opacity: 0;
 }
 
 .hamburguer span:before{
     content: "";
     position: absolute;
-    border-right: .5rem solid rgb(100, 224, 51);
+    border-right: .5rem solid var(--cor-elem-pad);
     border-top: .5rem solid transparent;
     border-left: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
@@ -141,7 +143,7 @@ header {
     letter-spacing: .2rem;
     color: #ffffff;
     background: #52c234;
-    background: -webkit-linear-gradient(to right, #061700, #52c234);
+    background: -webkit-linear-gradient(to right,#061700, #52c234);
     background: linear-gradient(to right, #061700, #52c234);
     border: none;
     padding: 1rem 3rem;
@@ -195,7 +197,7 @@ header {
 }
 
 .menu-link:hover{
-    color: rgb(100, 224, 51);
+    color: var(--cor-elem-pad);
 }
 
 .social-media{
@@ -218,13 +220,14 @@ header {
 }
 
 .social-media i:hover{
-    color: rgb(100, 224, 51);
+    color: var(--cor-elem-pad);
 }
 
 /* seção conhecimentos */
 
 .sessao-conhecimento{
-    background-color: #eeecec;
+    background-color: var(--cor-fundo);
+    height: 100vh;
 }
 
 .sessao-header{
@@ -237,7 +240,7 @@ header {
     font-family: var(--font-primary);
     font-size: 2.5rem;
     color: #555;
-    border-bottom: solid 4px rgb(100, 224, 51);
+    border-bottom: solid 4px var(--cor-elem-pad);
     margin-bottom: 1rem;
 }
 
@@ -245,7 +248,7 @@ header {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 4rem);
-    row-gap: 2rem;
+    row-gap: 1.5rem;
 }
 
 .conhecimento:nth-child(1){
@@ -312,4 +315,99 @@ header {
 .conhecimento-img-wrapper img{
     object-fit: cover;
     width: 100%;
+}
+
+/* Sessão dos projetos */
+
+.sessao-projetos{
+    height: 100vh;
+}
+
+#proj{
+    margin-bottom: 2rem;
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: #555555;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    opacity: 0.8;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.card-info{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0,0,0,0.8);
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.card-info h3{
+    font-family: var(--font-action);
+    color: var(--cor-elem-pad);
+    font-weight: bolder;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-family: var(--font-secondary);
+    color: #fff;
+    width: 80%;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    font-family: var(--font-action);
+    color: #fff;
+    background: #52c234;
+    background: -webkit-linear-gradient(to right,#061700, #52c234);
+    background: linear-gradient(to right, #061700, #52c234);
+    font-size: 1rem;
+    border-radius: .5rem;
+    border-style: none;
+    box-shadow: 0 .1rem .8rem rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+.card:hover .card-info{
+    opacity: 1;
+    visibility: visible;
+    bottom: 2rem;
 }
