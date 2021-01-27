@@ -22,6 +22,45 @@ html{
     scroll-behavior: smooth;
 }
 
+/* pré load */
+
+.loader_bg{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    background-color: #000; 
+    z-index: 999999;
+}
+
+.wavy{
+    position: relative;
+}
+
+.wavy span{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%,100%{
+        transform: translateY(0px);
+    }
+}
+
 /* menu hamburguer - inicio */
 
 .hamburguer {
