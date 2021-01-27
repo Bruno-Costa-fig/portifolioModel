@@ -17,13 +17,18 @@
     --cor-elem-pad: rgb(100, 224, 51);
 }
 
+html{
+    /* deixa o scroll mais lento */
+    scroll-behavior: smooth;
+}
+
 /* menu hamburguer - inicio */
 
 .hamburguer {
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 500;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -45,6 +50,7 @@
 }
 
 .hamburguer span{
+    z-index: 600;
     position: absolute;
     left:3rem;
     height: 2rem;
@@ -59,6 +65,7 @@
 }
 
 .hamburguer span:before{
+    z-index: 600;
     content: "";
     position: absolute;
     border-right: .5rem solid var(--cor-elem-pad);
@@ -172,6 +179,7 @@ header {
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 400;
 }
 
 .show-menu .sidebar{
@@ -519,6 +527,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 .orcamento-wrapper{
@@ -573,4 +582,53 @@ header {
 .btn-orcamento{
     padding: 1rem;
     grid-column: 2;
+}
+
+footer{
+    background-color: #061700;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secondary);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+#link-topo{
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    background: #52c234;
+    background: -webkit-linear-gradient(to right,#061700, #52c234);
+    background: linear-gradient(to right, #061700, #52c234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .2rem;
+    box-shadow: 0 0.3rem 0.6rem rgba(0,0,0,0.6);
 }
