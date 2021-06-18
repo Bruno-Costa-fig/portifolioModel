@@ -15,4 +15,4 @@ o controle das tarefas do projeto será realizado dentro do próprio GitHub
 
 ## Link do Deploy no GitHub Pages:
 
-<a href="https://bruno-costa-fig.github.io/portfolio/">Clique aqui</a>
+<a href="https://bruno-costa-fig.github.io/portfolioModel/">Clique aqui</a>
